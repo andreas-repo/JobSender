@@ -13,10 +13,11 @@ import javafx.scene.layout.VBox;
 public class CreateJobController {
     @FXML
     public GridPane gridPaneId;
+    private Form form;
 
     @FXML
     public void initialize() {
-        Form form = Form.of(
+        form = Form.of(
                 Group.of(
                         Field.ofStringType("")
                                 .label("First Name"),
