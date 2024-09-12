@@ -13,6 +13,7 @@ public class JobSenderApplication extends Application {
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(JobSenderApplication.class.getResource("create-job-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), Screen.getPrimary().getVisualBounds().getWidth()-10, Screen.getPrimary().getVisualBounds().getHeight()-10);
+        scene.getStylesheets().add("style.css");
         stage.setTitle("Welcome to Job Creation Application!");
         stage.setScene(scene);
         stage.show();

@@ -7,13 +7,12 @@ import com.dlsc.formsfx.view.renderer.FormRenderer;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
 import javafx.scene.control.Label;
+import javafx.scene.layout.GridPane;
 import javafx.scene.layout.VBox;
 
 public class CreateJobController {
     @FXML
-    public VBox createJobVBoxId;
-    @FXML
-    private Label welcomeText;
+    public GridPane gridPaneId;
 
     @FXML
     public void initialize() {
@@ -29,9 +28,9 @@ public class CreateJobController {
                                 .label("Phone Number")
                 )
         ).title("Create Job");
-
-        createJobVBoxId.getChildren().add(new FormRenderer(form));
-        createJobVBoxId.setMaxWidth(400);
+        FormRenderer formRenderer = new FormRenderer(form);
+        formRenderer.setPrefWidth(600);
+        gridPaneId.getChildren().add(formRenderer);
     }
 
 }
